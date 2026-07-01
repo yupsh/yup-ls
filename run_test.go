@@ -11,14 +11,14 @@ import (
 
 func TestRun(t *testing.T) {
 	cases := []struct {
+		files      map[string]string
 		name       string
 		version    string
+		wantOut    string
+		wantErrSub string
 		args       []string
 		dirs       []string
-		files      map[string]string
-		wantOut    string
 		wantCode   int
-		wantErrSub string
 	}{
 		{
 			name:    "default lists visible entries",

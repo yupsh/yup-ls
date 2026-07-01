@@ -11,6 +11,8 @@ import (
 	"github.com/urfave/cli/v3"
 )
 
+const name = "ls"
+
 const (
 	flagAll       = "all"
 	flagRecursive = "recursive"
@@ -39,7 +41,7 @@ func run(version string, args []string, _ io.Reader, stdout, stderr io.Writer, f
 	cmd.Writer = stdout
 	cmd.ErrWriter = stderr
 	if err := cmd.Run(context.Background(), args); err != nil {
-		_, _ = fmt.Fprintf(stderr, "ls: %v\n", err)
+		_, _ = fmt.Fprintf(stderr, name+": %v\n", err)
 		return 1
 	}
 	return 0
@@ -47,7 +49,7 @@ func run(version string, args []string, _ io.Reader, stdout, stderr io.Writer, f
 
 func newCommand(version string, stdout io.Writer, fs afero.Fs) *cli.Command {
 	return &cli.Command{
-		Name:            "ls",
+		Name:            name,
 		Version:         version,
 		Usage:           "list directory contents",
 		UsageText:       usageText,
