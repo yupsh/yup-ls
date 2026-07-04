@@ -1,21 +1,9 @@
-# yup-ls
+[![actions](https://github.com/yupsh/yup-ls/actions/workflows/actions.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/actions.yml)
+[![ci](https://github.com/yupsh/yup-ls/actions/workflows/ci.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/ci.yml)
+[![dockerfiles](https://github.com/yupsh/yup-ls/actions/workflows/dockerfiles.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/dockerfiles.yml)
+[![docs](https://github.com/yupsh/yup-ls/actions/workflows/docs.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/docs.yml)
+[![go](https://github.com/yupsh/yup-ls/actions/workflows/go.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/go.yml)
+[![release](https://github.com/yupsh/yup-ls/actions/workflows/release.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/release.yml)
+[![shell](https://github.com/yupsh/yup-ls/actions/workflows/shell.yml/badge.svg)](https://github.com/yupsh/yup-ls/actions/workflows/shell.yml)
 
-```
-NAME:
-   ls - list directory contents
-
-USAGE:
-   ls [OPTIONS] [FILE]
-
-   List information about the FILE (the current directory by default).
-
-VERSION:
-   dev
-
-GLOBAL OPTIONS:
-   --all, -a        do not ignore entries starting with .
-   --recursive, -R  list subdirectories recursively
-   --long, -l       use a long listing format
-   --help, -h       show help
-   --version        print version information and exit
-```
+[docs](https://yupsh.github.io/docs.repl/)
