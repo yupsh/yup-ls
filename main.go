@@ -32,9 +32,24 @@ var spec = clix.Spec{
 	Synopsis: synopsis,
 	Build:    build,
 	Flags: []urf.Flag{
-		&urf.BoolFlag{Name: flagAll, Aliases: []string{"a"}, Usage: "do not ignore entries starting with ."},
-		&urf.BoolFlag{Name: flagRecursive, Aliases: []string{"R"}, Usage: "list subdirectories recursively"},
-		&urf.BoolFlag{Name: flagLong, Aliases: []string{"l"}, Usage: "use a long listing format"},
+		&urf.BoolFlag{
+			Name:    flagAll,
+			Aliases: []string{"a"},
+			Usage:   "do not ignore entries starting with .",
+			Sources: urf.EnvVars("YUP_LS_ALL"),
+		},
+		&urf.BoolFlag{
+			Name:    flagRecursive,
+			Aliases: []string{"R"},
+			Usage:   "list subdirectories recursively",
+			Sources: urf.EnvVars("YUP_LS_RECURSIVE"),
+		},
+		&urf.BoolFlag{
+			Name:    flagLong,
+			Aliases: []string{"l"},
+			Usage:   "use a long listing format",
+			Sources: urf.EnvVars("YUP_LS_LONG"),
+		},
 	},
 }
 
